@@ -8,7 +8,7 @@ if [[ -d "micropython" ]]
 then
     echo "MicroPython exists on your filesystem"
     cd micropython
-    git pull
+    git pull --recurse-submodules
     cd ..
 else
     echo "Clonning MicroPython"
@@ -25,6 +25,5 @@ make BOARD=W5100S_EVB_PICO
 
 cd ../../../
 echo "Compiling finished"
-
 
 cp micropython/ports/rp2/build-W5100S_EVB_PICO/firmware.uf2 ./$FIRMWARE_FILENAME
