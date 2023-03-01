@@ -2,7 +2,14 @@
 
 echo "Installing MicroPython for W5100S EVB board"
 
-FIRMWARE_FILENAME=firmware-rp2-W5100S-EVB-Pico.uf2
+if [ -z "$1" ]
+  then
+    echo "No argument supplied"
+    FIRMWARE_FILENAME="firmware-rp2-w5100-evb-pico-$(date +"%Y-%m-%d").uf2"
+  else
+    FIRMWARE_FILENAME="$1"
+fi
+
 
 if [[ -d "micropython" ]]
 then
