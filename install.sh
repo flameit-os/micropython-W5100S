@@ -2,7 +2,7 @@
 
 echo "Installing MicroPython for W5100S EVB board"
 
-FIRMWARE_FILENAME=firmware-rp2-W5100S-EVB-Pico-$(date +"%Y-%m-%d").uf2
+FIRMWARE_FILENAME=firmware-rp2-W5100S-EVB-Pico.uf2
 
 if [[ -d "micropython" ]]
 then
